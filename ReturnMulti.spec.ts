@@ -25,7 +25,7 @@ test('test', async ({ page }) => {
   // Navigate to dashboard 
    await page.goto('https://mnscat1.mnscat.lott/admin/portal.do#');
   await page.locator('input[name="username"]').fill('administrator');
-  await page.locator('input[name="password"]').fill('welcome');
+  await page.locator('input[name="password"]').fill('password');
   await page.getByRole('button', { name: 'Go' }).click();
   await page.getByRole('button', { name: 'Continue' }).click();
 //##### if i < 10 then repeat +1
@@ -133,5 +133,6 @@ PackID1++;
 
   // Close the browser after a delay (optional, for observation)
   await page.waitForTimeout(2000);
+
 
 });
